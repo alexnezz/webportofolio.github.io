@@ -1,0 +1,296 @@
+/* My Fonts */
+@font-face {
+    font-family: 'Viga';
+    src: url(../fonts/Viga-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'DancingScript';
+    src: url(../fonts/DancingScript-VariableFont_wght.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lobster';
+    src: url(../fonts/Lobster-Regular.ttf) format('truetype');
+}
+
+/* Akhir Fonts */
+
+
+
+
+.nav-item {
+    /* color: red !important; */
+    margin-right: 20px;
+    color: white !important;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+    /* font-family: 'DancingScript', 'Times New Roman', Times, serif; */
+    font-size: 16px;
+}
+
+.navbar-brand {
+    font-family: 'Viga', 'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+}
+
+.carousel {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .8);
+}
+
+.slider h3::after {
+    content: '';
+    display: block;
+    margin-top: 200px !important;
+    font-size: 60px;
+    font-weight: 200;
+}
+
+.slider .tombol {
+    margin-top: -300px;
+    font-size: 20px;
+}
+
+.slider h3 {
+    font-size: 60px;
+    font-weight: 200;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, .8);
+}
+
+.carousel-item img {
+    height: 600px;
+}
+
+section {
+    min-height: 400px;
+}
+
+.about p {
+    font-size: 16px;
+    color: #333;
+    font-style: italic;
+}
+
+.about .pKiri {
+    opacity: 0;
+    transform: translate(-100px, 0);
+    transition: .5s;
+}
+
+.about .pKanan {
+    opacity: 0;
+    transform: translate(100px, 0);
+    transition: 1s;
+}
+
+.about .pKiri.muncul,
+.about .pKanan.muncul {
+    opacity: 1;
+    transform: translate(0);
+}
+
+.service {
+    background-color: #eee;
+    padding: 10px 0;
+}
+
+.service .card {
+    /* background-color: rgb(51, 255, 0); */
+    border: 2px solid grey;
+    background-color: rgb(41, 37, 243);
+}
+
+.service .card p {
+    color: white;
+}
+
+.card h5 {
+    color: white;
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    margin-top: 10px;
+    /* border: 3px solid grey; */
+}
+
+.card p {
+    font-size: 16px;
+    font-style: italic;
+    color: brown;
+}
+
+.service .card {
+    opacity: 0;
+    transform: translate(0, -100px);
+    transition: .5s;
+}
+
+.service .card.fall {
+    opacity: 1;
+    transform: translate(0);
+}
+
+.progress {
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+
+.content-progress {
+    opacity: 0;
+    transform: translate(0, 100px);
+    transition: 1s;
+}
+
+.skill-progress {
+    opacity: 0;
+    transform: translate(0, -100px);
+    transition: 1s;
+}
+
+.content-progress.show,
+.skill-progress.show {
+    opacity: 1;
+    transform: translate(0);
+}
+
+.team {
+    margin-bottom: 100px;
+}
+
+.team .partner {
+    background-color: lightseagreen;
+    border: 3px solid black;
+}
+
+.gallery {
+    background-color: #eee;
+    padding: 20px 0px;
+}
+
+.gallery a {
+    text-decoration: none;
+}
+
+.gallery p {
+    font-family: 'Lobster', 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.gallery .img-thumbnail {
+    opacity: 0;
+    transform: scale(0);
+    transition: .5s;
+    /* border-radius: 50%; */
+}
+
+.gallery .img-thumbnail.datang {
+    opacity: 1;
+    transform: scale(1);
+    border-radius: 50%;
+}
+
+.card h5 {
+    font-size: 27px;
+}
+
+.card p {
+    font-size: 16px;
+    color: white;
+}
+
+.card .utama {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.testimoni {
+    margin-top: 200px;
+}
+
+.testimoni p {
+    font-size: 30px;
+    font-weight: 200;
+    font-style: italic;
+    margin-bottom: 50px;
+}
+
+.figure img {
+    width: 60px;
+    height: 60px;
+    opacity: 0.7;
+    margin-top: 5px;
+    border: 3px solid grey;
+}
+
+.figure img.utama {
+    width: 90px;
+    height: 90px;
+    opacity: 1;
+    margin: -10px 20px 0px;
+}
+
+.figure .profil {
+    font-size: 16px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.figure p {
+    font-size: 14px;
+    color: #acacac;
+    font-style: italic;
+    margin-top: -5px;
+}
+
+footer p {
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+
+
+/* Responsive Breakpoint */
+/* Ukuran mobile */
+@media (max-width: 576px) {
+    .carousel-item img {
+        height: 400px;
+    }
+
+    .about p {
+        font-size: 15px;
+    }
+
+    .content-progress p {
+        font-size: 15px;
+        font-style: italic;
+        margin-bottom: 50px;
+    }
+
+    .contact .card-box {
+        width: 80%;
+        margin: auto;
+    }
+
+    .testimoni p {
+        font-size: 22px;
+    }
+
+    .figure p {
+        font-size: 13px;
+        font-style: italic;
+        color: #acacac;
+    }
+
+    .figure img.utama {
+        width: 90px;
+        height: 90px;
+    }
+
+    footer p {
+        font-size: 18px;
+    }
+
+}

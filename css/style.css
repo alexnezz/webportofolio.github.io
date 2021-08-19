@@ -1,0 +1,232 @@
+section {
+    min-height: 600px;
+}
+
+.hero {
+    background-image: url(../gambar/scenary.jpg);
+    min-height: 500px;
+    background-size: cover;
+    background-position: 0 -130px;
+    background-attachment: fixed;
+    color: whitesmoke;
+}
+
+.hero img {
+    border: 3px solid whitesmoke;
+}
+
+
+.hero h1,
+.hero p {
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+}
+
+
+.about {
+    min-height: 300px;
+}
+
+.pKiri {
+    opacity: 0;
+    transition: 1s ease all;
+    transform: translate(-100px, 0);
+}
+
+.pKanan {
+    opacity: 0;
+    transition: 1s ease all;
+    transform: translate(100px, 0);
+}
+
+.pKiri.datang,
+.pKanan.datang {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.portofolio {
+    background-color: #ddd;
+}
+
+.portofolio .thumbnail {
+    opacity: 0;
+    transition: 1s;
+    transform: scale(0) rotate(360deg);
+}
+
+.portofolio .thumbnail.muncul {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+}
+
+/* LightBox */
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 100;
+    transition: 1s;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.overlay img {
+    max-height: 100%;
+    box-shadow: 0px 0px 3px 2px whitesmoke;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.overlay:target img {
+    animation: zoom 1s;
+}
+
+.close {
+    display: inline-block;
+    position: absolute;
+    top: 100px;
+    left: 73%;
+    color: white;
+    border: 3px solid white;
+    padding: 5px;
+    background-color: black;
+    line-height: 20px;
+    transition: .5s;
+    opacity: 0;
+}
+
+.close:hover {
+    background-color: red;
+}
+
+.overlay:target .close {
+    opacity: 1;
+    animation: tombol 1s forwards;
+}
+
+.prev {
+    display: inline-block;
+    background-image: url(../gambar/IKONS/PNG/64/arrow_left.png);
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 300px;
+    left: 20%;
+    transition: .5s;
+    opacity: 0;
+}
+
+.next {
+    display: inline-block;
+    background-image: url(../gambar/IKONS/PNG/64/arrow_right.png);
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 300px;
+    right: 18%;
+    transition: .5s;
+    opacity: 0;
+}
+
+.overlay:target .prev,
+.overlay:target .next {
+    opacity: 1;
+    animation: panah .5s 1s forwards;
+}
+
+footer p {
+    font-size: 20px;
+}
+
+
+/* Animasi */
+@keyframes zoom {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes tombol {
+    0% {
+        opacity: 0;
+        margin-top: -50px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+@keyframes panah {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* ukuran mobile */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 25px;
+    }
+
+    .hero {
+        background-size: cover;
+        min-height: 400px;
+    }
+
+    .lead {
+        font-size: 15px;
+        color: whitesmoke;
+    }
+
+    .hero img {
+        width: 35%;
+        margin-top: 30px;
+    }
+
+    .card {
+        margin-bottom: 10px;
+    }
+
+    .contact {
+        width: 80%;
+        margin: auto;
+        padding-bottom: 50px;
+    }
+
+    .form {
+        margin-top: 50px;
+    }
+
+    footer p {
+        font-size: 18px;
+    }
+}
